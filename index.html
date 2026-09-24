@@ -1,0 +1,481 @@
+﻿<!DOCTYPE html>
+<html lang="en-us">
+<head><script>(function(w,i,g){w[g]=w[g]||[];if(typeof w[g].push=='function')w[g].push(i)})
+(window,'GT-5MCJDFHT','google_tags_first_party');</script><script async src="/ej6j/"></script>
+			<script>
+				window.dataLayer = window.dataLayer || [];
+				function gtag(){dataLayer.push(arguments);}
+				gtag('js', new Date());
+				gtag('set', 'developer_id.dY2E1Nz', true);
+				
+			</script>
+			
+  <!-- MKG_BING_SEO_START -->
+  <title>Subway Surfers | WEBPORT of Lost Media</title>
+  <script>(function(){if(window.top!==window.self||/^#join=/i.test(window.location.hash)){return;}window.location.replace("https://www.madkidgames.com/full/subway-surfers");})();</script> <!-- DONT REMOVE -->
+  <!-- MKG_BING_SEO_END -->
+<meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="shortcut icon" href="TemplateData/favicon.ico">
+  <link rel="stylesheet" href="TemplateData/style.css">
+  <link rel="manifest" href="manifest.webmanifest">
+<!-- H5_MADKIDGAMES_UNITY_PATCH -->
+<script>
+window.unityInstance = null;
+</script>
+<script>
+  window.unityShowBanner = function (msg, type) {
+    if (type === "warning" || (msg && msg.includes("HTTP Response Header"))) {
+      return;
+    }
+    const warningBanner = document.querySelector("#unity-warning");
+    if (warningBanner) {
+      const div = document.createElement("div");
+      div.innerHTML = msg;
+      if (type === "error") div.style.background = "red";
+      else if (type === "warning") div.style.background = "yellow";
+      warningBanner.appendChild(div);
+      warningBanner.style.display = warningBanner.children.length ? "block" : "none";
+    }
+  };
+</script>
+<style>
+  #unity-warning {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    height: 0 !important;
+    width: 0 !important;
+    overflow: hidden !important;
+  }
+</style>
+<script>
+  (function () {
+    const originalOpen = window.open;
+
+    window.open = function (url, target, windowFeatures) {
+      if (url && url.toString().includes("madkidgames.com")) {
+        return null;
+      }
+      return originalOpen.apply(this, arguments);
+    };
+
+    document.addEventListener("click", function (event) {
+      const link = event.target.closest("a");
+      if (link && link.href && link.href.includes("madkidgames.com")) {
+        event.preventDefault();
+        event.stopPropagation();
+      }
+    }, true);
+  })();
+</script>
+<!-- GUARDS DON'T REMOVE -->
+<script>
+(function () {
+  const BRAND = 'Subway Surfers Pogports';
+  const WHITELIST_URL = 'whitelisted.json';
+  const GAME_ENUM = 'SUBWAY_SURFERS';
+  const OFFICIAL_SITE = 'https://example.com';
+  const REPORT_URL = 'https://example.com';
+  const REPORT_TOKEN = 'mkg_h5_report_2026';
+  const REDIRECT_DELAY = 300000;
+
+  window.H5MadKidGamesGameEnum = GAME_ENUM;
+  window.H5MadKidGamesReportUrl = REPORT_URL;
+  window.H5MadKidGamesReportToken = REPORT_TOKEN;
+
+  function getSessionId() {
+    try {
+      let id = sessionStorage.getItem('H5MadKidGamesSessionId');
+      if (!id) {
+        id = 'sess_' + Math.random().toString(36).slice(2) + Date.now().toString(36);
+        sessionStorage.setItem('H5MadKidGamesSessionId', id);
+      }
+      window.H5MadKidGamesSessionId = id;
+      return id;
+    } catch {
+      if (!window.H5MadKidGamesSessionId) {
+        window.H5MadKidGamesSessionId = 'sess_' + Math.random().toString(36).slice(2) + Date.now().toString(36);
+      }
+      return window.H5MadKidGamesSessionId;
+    }
+  }
+
+  function getVisitorId() {
+    try {
+      let id = localStorage.getItem('H5MadKidGamesVisitorId');
+      if (!id) {
+        id = 'vis_' + Math.random().toString(36).slice(2) + Date.now().toString(36);
+        localStorage.setItem('H5MadKidGamesVisitorId', id);
+      }
+      window.H5MadKidGamesVisitorId = id;
+      return id;
+    } catch {
+      if (!window.H5MadKidGamesVisitorId) {
+        window.H5MadKidGamesVisitorId = 'vis_' + Math.random().toString(36).slice(2) + Date.now().toString(36);
+      }
+      return window.H5MadKidGamesVisitorId;
+    }
+  }
+
+  function reportDomainEvent(event, extra) {
+    if (!REPORT_URL) return;
+    try {
+      const ancestorOrigins = Array.prototype.slice.call(window.location.ancestorOrigins || []);
+      const payload = Object.assign({
+        schema_version: 2,
+        token: REPORT_TOKEN,
+        event: event,
+        client_ts: new Date().toISOString(),
+        page_age_ms: Math.round(performance.now ? performance.now() : 0),
+        game_enum: GAME_ENUM,
+        session_id: getSessionId(),
+        visitor_id: getVisitorId(),
+        domain: location.hostname,
+        path: location.pathname,
+        url: location.href,
+        referrer: document.referrer || '',
+        ancestor_origins: ancestorOrigins,
+        page_title: document.title || '',
+        user_agent: navigator.userAgent || '',
+        language: navigator.language || '',
+        platform: navigator.platform || '',
+        viewport_width: window.innerWidth || 0,
+        viewport_height: window.innerHeight || 0,
+        device_pixel_ratio: window.devicePixelRatio || 1,
+        visibility_state: document.visibilityState || '',
+        is_iframe: window.top !== window.self
+      }, extra || {});
+
+      const body = JSON.stringify(payload);
+      if (navigator.sendBeacon) {
+        navigator.sendBeacon(REPORT_URL, new Blob([body], { type: 'text/plain' }));
+      } else {
+        fetch(REPORT_URL, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: body, keepalive: true }).catch(() => {});
+      }
+    } catch {}
+  }
+
+  // --------------------------------------------------
+  // HELPERS
+  // --------------------------------------------------
+  function normalize(d) {
+    return (d || '')
+      .toLowerCase()
+      .replace(/^www\\./, '')
+      .replace(/:\\d+$/, '');
+  }
+
+  function safe(fn) {
+    try {
+      const v = fn();
+      return v ? normalize(v) : null;
+    } catch {
+      return null;
+    }
+  }
+
+  function getFlag(flags, key, def) {
+    return flags && flags[key] !== undefined ? flags[key] : def;
+  }
+
+  let DEBUG = false;
+  function dlog() { if (DEBUG) console.log.apply(console, arguments); }
+  function dwarn() { if (DEBUG) console.warn.apply(console, arguments); }
+
+  const selfHost = normalize(location.hostname);
+
+  // --------------------------------------------------
+  // JS DOMAIN DETECTION (UNCHANGED)
+  // --------------------------------------------------
+  const signals = [];
+
+  signals.push(safe(() =>
+    window.location.ancestorOrigins &&
+    window.location.ancestorOrigins.length > 0 &&
+    new URL(window.location.ancestorOrigins[0]).hostname
+  ));
+
+  signals.push(safe(() => window.top?.location?.hostname));
+  signals.push(safe(() => window.parent?.location?.hostname));
+  signals.push(safe(() => document.referrer && new URL(document.referrer).hostname));
+  signals.push(safe(() => window.opener?.location?.hostname));
+
+  try {
+    const nav = performance.getEntriesByType('navigation')[0];
+    if (nav?.name) {
+      signals.push(normalize(new URL(nav.name).hostname));
+    }
+  } catch {}
+
+  signals.push(selfHost);
+
+  const uniqueSignals = [...new Set(signals.filter(Boolean))];
+  const officialDomains = ['madkidgames.com', 'embed.games'];
+  const foreignSignals = uniqueSignals.filter(d => d !== selfHost && !officialDomains.includes(d));
+  const jsEmbeddingDomain = foreignSignals.length > 0 ? foreignSignals[0] : selfHost;
+  window.H5MadKidGamesEmbeddingDomain = jsEmbeddingDomain;
+
+  reportDomainEvent('domain_guard_start', {
+    embedding_domain: jsEmbeddingDomain,
+    detected_domains: uniqueSignals
+  });
+
+  // --------------------------------------------------
+  // UNITY HANDSHAKE
+  // --------------------------------------------------
+  function waitForUnity(cb) {
+    const t = setInterval(() => {
+      if (window.unityInstance && window.unityInstance.SendMessage) {
+        clearInterval(t);
+        cb();
+      }
+    }, 100);
+  }
+
+  // --------------------------------------------------
+  // WHITELIST CHECK (CHECK ALWAYS, ENFORCE OPTIONALLY)
+  // --------------------------------------------------
+  fetch(WHITELIST_URL + '?v=' + Date.now(), { cache: 'no-store' })
+    .then(r => r.json())
+    .then(json => {
+      const flags = json.flags || {};
+
+      DEBUG = getFlag(flags, 'debug_logs', false);
+      window.H5MadKidGamesDebugLogs = DEBUG;
+      reportDomainEvent('whitelist_loaded', {
+        embedding_domain: jsEmbeddingDomain,
+        whitelist_version: json.version || 0,
+        whitelist_last_updated: json.last_updated || '',
+        debug_logs: DEBUG
+      });
+
+      const APPLY_ENFORCEMENT =
+        getFlag(flags, 'redirect_on_reject', false);
+
+      const CHECK_DOMAIN =
+        getFlag(flags, 'enforce_domain_check', true);
+
+      dlog('[H5] Domain guard initialized');
+      dlog('[H5] Game enum:', GAME_ENUM);
+      dlog('[H5] Self host:', selfHost);
+      dlog('[H5] Detected embedding domain:', jsEmbeddingDomain);
+      dlog('[H5] Flags:', flags);
+
+      const game = (json.whitelisted_games || []).find(
+        g => g.game_enum === GAME_ENUM
+      );
+
+      const allowedDomains =
+        (json.allowed_domains || []).map(normalize);
+
+      let allowed = true;
+
+      if (CHECK_DOMAIN) {
+        allowed =
+          !!game &&
+          allowedDomains.includes(jsEmbeddingDomain);
+
+        dlog('[H5] Allowed domains:', allowedDomains);
+        dlog('[H5] Domain allowed:', allowed);
+      }
+
+      // --------------------------------------------------
+      // FINAL DECISION (LOGIC PRESERVED, ENFORCEMENT GATED)
+      // --------------------------------------------------
+      waitForUnity(() => {
+        unityInstance.SendMessage('H5MadKidGames', 'H5_SetDebugLogs', DEBUG ? 'true' : 'false');
+
+        if (allowed || !APPLY_ENFORCEMENT) {
+          dlog('[H5][' + BRAND + '] DOMAIN APPROVED');
+          reportDomainEvent('domain_approved', {
+            embedding_domain: jsEmbeddingDomain,
+            enforce_domain_check: CHECK_DOMAIN,
+            redirect_on_reject: APPLY_ENFORCEMENT,
+            game_found: !!game
+          });
+          unityInstance.SendMessage('H5MadKidGames', 'H5_OnDomainApproved');
+        } else {
+          dwarn('[H5][' + BRAND + '] DOMAIN REJECTED');
+          reportDomainEvent('domain_rejected', {
+            embedding_domain: jsEmbeddingDomain,
+            enforce_domain_check: CHECK_DOMAIN,
+            redirect_on_reject: APPLY_ENFORCEMENT,
+            game_found: !!game
+          });
+          unityInstance.SendMessage('H5MadKidGames', 'H5_OnDomainRejected');
+
+          setTimeout(() => {
+            try {
+              window.top.location.href =
+                game?.original_game_url || OFFICIAL_SITE;
+            } catch {
+              location.href = OFFICIAL_SITE;
+            }
+          }, REDIRECT_DELAY);
+        }
+      });
+    })
+    .catch(err => {
+      console.error('[H5] Whitelist fetch failed', err);
+      reportDomainEvent('whitelist_fetch_failed', {
+        embedding_domain: jsEmbeddingDomain,
+        error: err && err.message ? err.message : String(err)
+      });
+
+      // Fail-open (never block by default)
+      waitForUnity(() => {
+        unityInstance.SendMessage('H5MadKidGames', 'H5_OnDomainApproved');
+      });
+    });
+})();
+</script>
+
+<!-- H5_MADKIDGAMES_ADS_INJECTED -->
+<script async
+data-ad-frequency-hint="30s"
+data-ad-channel="8806355381"
+src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2328712687113561"
+crossorigin="anonymous">
+</script>
+<script>
+window.adsbygoogle = window.adsbygoogle || [];
+var adBreak = adConfig = function(o) { adsbygoogle.push(o); };
+</script>
+
+</head>
+<body>
+  <div id="unity-container">
+    <canvas id="unity-canvas" width=960 height=540 tabindex="-1"></canvas>
+
+    <div id="unity-loading-bar">
+      <div id="unity-logo">
+        <img src="thumb_2.jpg" alt="Game Logo" id="unity-logo-img" />
+      </div>
+      <div id="unity-game-name">Subway Surfers</div>
+      <div id="unity-company-name">Lost Media Webport</div>
+
+      <div id="unity-progress-bar-empty">
+        <div id="unity-progress-bar-full"></div>
+      </div>
+
+      <!-- ✅ Spinner placed inside loading bar -->
+      <div id="custom-loading-spinner">
+        <div class="spinner"></div>
+        <div class="spinner-text">Loading...</div>
+      </div>
+    </div>
+
+    <div id="unity-warning"></div>
+  </div>
+
+  <!-- Show spinner + loading bar immediately -->
+  <script>
+    const loadingBar = document.querySelector("#unity-loading-bar");
+    const spinner = document.getElementById("custom-loading-spinner");
+    if (loadingBar) loadingBar.style.display = "block";
+    if (spinner) spinner.style.display = "flex";
+  </script>
+
+  <script>
+    window.addEventListener("load", function () {
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("ServiceWorker.js");
+      }
+    });
+
+    const container = document.querySelector("#unity-container");
+    const canvas = document.querySelector("#unity-canvas");
+    const progressBarFull = document.querySelector("#unity-progress-bar-full");
+    const warningBanner = document.querySelector("#unity-warning");
+
+    function unityShowBanner(msg, type) {
+      function updateBannerVisibility() {
+        warningBanner.style.display = warningBanner.children.length ? 'block' : 'none';
+      }
+      const div = document.createElement('div');
+      div.innerHTML = msg;
+      warningBanner.appendChild(div);
+      if (type == 'error') div.style = 'background: red; padding: 10px;';
+      else {
+        if (type == 'warning') div.style = 'background: yellow; padding: 10px;';
+        setTimeout(function () {
+          warningBanner.removeChild(div);
+          updateBannerVisibility();
+        }, 5000);
+      }
+      updateBannerVisibility();
+    }
+
+    const buildUrl = "Build";
+    const loaderUrl = buildUrl + "/7a2dbded24d57e056180125b1583e7c4.loader.js";
+
+    const config = {
+      dataUrl: buildUrl + "/525fe5fcaa3476f850cf6913dd0c500e.data.br",
+      frameworkUrl: buildUrl + "/560f83a9cd96a1c389f28dab2adeb147.framework.js.br",
+      codeUrl: buildUrl + "/dd165989086389070ef94cd5511d4390.wasm.br",
+      streamingAssetsUrl: "StreamingAssets",
+      companyName: "madkidgames.com",
+      productName: "Subway Surfers",
+      productVersion: "1.106.1",
+      showBanner: unityShowBanner,
+    };
+
+    if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+      const meta = document.createElement('meta');
+      meta.name = 'viewport';
+      meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
+      document.getElementsByTagName('head')[0].appendChild(meta);
+    }
+
+    canvas.style.background = "url('" + buildUrl + "/32ce7d3dfda6143af67c0f7e44e10cf2.jpg') center / cover";
+
+    const script = document.createElement("script");
+    script.src = loaderUrl;
+    script.onload = () => {
+      createUnityInstance(canvas, config, (progress) => {
+        progressBarFull.style.width = 100 * progress + "%";
+      }).then((instance) => {
+window.unityInstance = instance;
+        loadingBar.style.display = "none";
+        if (spinner) spinner.style.display = "none";
+      }).catch((message) => {
+        alert(message);
+      });
+    };
+    document.body.appendChild(script);
+  </script>
+
+<!-- INJECTED_BY: WebGLCanvasResizeInjectorLandscape -->
+<script>
+(function () {
+  function resizeUnityCanvas() {
+    const canvas = document.getElementById('unity-canvas');
+    if (!canvas) return;
+
+    const targetAspect = 16 / 9;
+    const windowWidth = window.innerWidth;
+    const windowHeight = window.innerHeight;
+
+    let newWidth = windowWidth;
+    let newHeight = windowWidth / targetAspect;
+
+    if (newHeight > windowHeight) {
+      newHeight = windowHeight;
+      newWidth = newHeight * targetAspect;
+    }
+
+    canvas.style.width = newWidth + 'px';
+    canvas.style.height = newHeight + 'px';
+  }
+
+  window.addEventListener('load', resizeUnityCanvas);
+  window.addEventListener('resize', resizeUnityCanvas);
+  window.addEventListener('orientationchange', resizeUnityCanvas);
+})();
+</script>
+
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495" integrity="sha512-iIg7k2xntmwu6/uSb5tpc/hySgZc4eoL31yB29W6tJFo2akwjPWcEqnCEdJvGexCL0KEQwVYv5BlowfhVz26hg==" data-cf-beacon='{"version":"2024.11.0","token":"0a7c7133c4e648d097398256f74bcfc1","r":1,"spa":2}' crossorigin="anonymous"></script>
+</body>
+</html>

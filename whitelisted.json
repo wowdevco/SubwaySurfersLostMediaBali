@@ -1,0 +1,19 @@
+{
+  "version": 3,
+  "last_updated": "2026-01-09",
+  "publisher": "Subway Surfers/POGPorts",
+  "flags": {
+    "debug_logs": true,
+    "enforce_domain_check": false,
+    "enforce_game_whitelist": false,
+    "redirect_on_reject": false,
+    "auto_interstitial": {
+      "first_delay": 5,
+      "repeat_interval": 120,
+      "countdown_seconds": 2,
+      "break_seconds": 5
+    }
+  },
+  "allowed_domains": ["*"],
+  "whitelisted_games": []
+}
